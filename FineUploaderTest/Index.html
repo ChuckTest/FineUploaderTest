@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="../bower_components/fine-uploader/dist/fine-uploader.css"/>
 </head>
 <body>
     <div class="file-upload">
@@ -14,6 +13,16 @@
             <a href="#" class="file-upload__btn--upload">Upload files</a>
         </div>
     </div>
-<script src="../bower_components/fine-uploader/dist/fine-uploader.js"></script>
+    <script>
+        function fileUpload() {
+            document.querySelector('.file-upload__input').click();
+        }
+
+        const dropzone = document.querySelector('.file-upload__drop-zone');
+        const button = document.querySelector('.file-upload__btn--upload');
+
+        dropzone.addEventListener('click', fileUpload);
+        button.addEventListener('click', fileUpload);
+    </script>
 </body>
 </html>
