@@ -23,7 +23,10 @@
         const button = document.querySelector('.file-upload__btn--upload');
 
         dropzone.addEventListener('click', fileUpload);
-        button.addEventListener('click', fileUpload);
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            fileUpload(event);
+        });
     </script>
 </body>
 </html>
