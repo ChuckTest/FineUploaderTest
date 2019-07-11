@@ -24,9 +24,8 @@
 
         dropzone.addEventListener('click', fileUpload);
         button.addEventListener('click', (event) => {
-            event.preventDefault();
-            event.stopPropagation();
             fileUpload(event);
+            return false;
         });
     </script>
 </body>
