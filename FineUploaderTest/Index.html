@@ -14,7 +14,8 @@
         </div>
     </div>
     <script>
-        function fileUpload() {
+        function fileUpload(event) {
+            console.log(event.currentTarget);
             document.querySelector('.file-upload__input').click();
         }
 
